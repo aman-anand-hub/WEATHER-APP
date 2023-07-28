@@ -1,12 +1,16 @@
+import weatherAppApiKey from "./config.js";
+
 const container=document.querySelector('.container');
 const search=document.querySelector('.search-box');
 const error404=document.querySelector('.not-found');
 const weatherBox=document.querySelector('.weather-box');
 const weatherDetails=document.querySelector('.weather-details');
 
+console.log(weatherAppApiKey);
+
 search.addEventListener('click', () => {
 
-    const APIKey = '10e0089b29e1bdfc66441cfc970c5cb7';
+    const APIKey = weatherAppApiKey;
     const city = document.querySelector('.search-box input').value;
 
     if (city == '')
